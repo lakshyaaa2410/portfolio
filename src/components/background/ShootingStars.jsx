@@ -2,7 +2,7 @@ import React from "react";
 import "./ShootingStars.scss";
 
 function ShootingStars() {
-	const stars = Array.from({ length: 20 });
+	const stars = Array.from({ length: 10 });
 
 	return (
 		<div className="stars-background">
