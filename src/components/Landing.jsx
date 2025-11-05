@@ -4,10 +4,11 @@ import LinkedIn from "./icons/LinkedIn";
 import Github from "./icons/Github";
 import Instagram from "./icons/Instagram";
 import Gmail from "./icons/Gmail";
+import AvatarMorph from "./utils/AvatarMorph";
 
 function Landing() {
 	return (
-		<div className="grid grid-cols-2 mt-5">
+		<div className="grid grid-cols-2 mt-10">
 			<div className="text-center flex items-center justify-center">
 				<div>
 					<h1
@@ -20,8 +21,7 @@ function Landing() {
 						className="mt-10 text-sm italic"
 						style={{ fontFamily: "'Press Start 2P', cursive" }}
 					>
-						From local build to cloud production - I handle the
-						journey
+						From design to deployment through clean engineering.
 					</p>
 					<div className="mt-10 flex flex-row space-x-8 justify-center">
 						<LinkedIn pop="#0a66c2" height="35px" />
@@ -33,7 +33,7 @@ function Landing() {
 				</div>
 			</div>
 			<div className="flex justify-end">
-				<img src="/Hero.png" className="h-100 object-contain" />
+				<AvatarMorph />
 			</div>
 		</div>
 	);

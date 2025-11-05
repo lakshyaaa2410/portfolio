@@ -10,7 +10,6 @@
 	@return $random_range;
 }
 
-/* === Background wrapper === */
 .stars-background {
 	position: fixed;
 	inset: 0;
@@ -19,7 +18,7 @@
 	background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
 }
 
-/* === Star container === */
+/* === Stars container === */
 .stars {
 	position: absolute;
 	top: 0;
@@ -30,14 +29,13 @@
 	pointer-events: none;
 }
 
-/* === Individual star === */
 .star {
-	$star-count: 20; // ⬅️ Reduced from 50
-	--star-color: #ffffffcc;
-	--star-tail-length: 4em; // ⬅️ Shorter tails
+	$star-count: 20;
+	--star-color: #ffffff6c;
+	--star-tail-length: 2em;
 	--star-tail-height: 2px;
-	--star-width: calc(var(--star-tail-length) / 6);
-	--fall-duration: 14s; // ⬅️ Slower fall
+	--star-width: calc(var(--star-tail-length) / 8);
+	--fall-duration: 3s;
 	--tail-fade-duration: var(--fall-duration);
 
 	position: absolute;
@@ -48,7 +46,7 @@
 	color: var(--star-color);
 	background: linear-gradient(45deg, currentColor, transparent);
 	border-radius: 50%;
-	filter: drop-shadow(0 0 4px currentColor);
+	filter: drop-shadow(0 0 6px currentColor);
 	transform: translate3d(104em, 0, 0);
 	animation: fall var(--fall-duration) var(--fall-delay) linear infinite,
 		tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
@@ -59,11 +57,10 @@
 
 	@for $i from 1 through $star-count {
 		&:nth-child(#{$i}) {
-			--star-tail-length: #{random_range(300em, 600em) /
-				100}; // ⬅️ shorter range
+			--star-tail-length: #{random_range(500em, 750em) / 100};
 			--top-offset: #{random_range(0vh, 10000vh) / 100};
-			--fall-duration: #{random_range(12000, 20000s) / 1000}; // ⬅️ slower
-			--fall-delay: #{random_range(0, 8000s) / 1000};
+			--fall-duration: #{random_range(6000, 12000s) / 500};
+			--fall-delay: #{random_range(0, 10000s) / 1000};
 		}
 	}
 
@@ -82,7 +79,7 @@
 			transparent
 		);
 		border-radius: inherit;
-		animation: blink 3s linear infinite;
+		animation: blink 2s linear infinite;
 	}
 
 	&::before {
@@ -94,7 +91,7 @@
 	}
 }
 
-/* === Animations === */
+/* === Keyframes === */
 @keyframes fall {
 	to {
 		transform: translate3d(-30em, 0, 0);
