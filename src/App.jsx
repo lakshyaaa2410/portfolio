@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ShootingStars from "./components/background/ShootingStars";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<main className="max-w-5xl mx-auto p-4">
 				<Routes>
 					<Route path="/" element={<Landing />} />
+					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/projects" element={<Projects />} />
 				</Routes>
