@@ -1,13 +1,18 @@
 import { Route, Routes } from "react-router";
-import Landing from "./components/Landing";
-import Navbar from "./components/Navbar";
 
-import ShootingStars from "./components/background/ShootingStars";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
+import {
+	ShootingStars,
+	Navbar,
+	Landing,
+	About,
+	Contact,
+	Projects,
+} from "./components";
+
+import useDynamicTitle from "./hooks/useDynamicTitles";
 
 function App() {
+	useDynamicTitle();
 	return (
 		<section id="heroSection" className=" pt-4 min-h-screen">
 			<ShootingStars />

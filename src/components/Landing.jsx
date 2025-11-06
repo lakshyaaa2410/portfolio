@@ -1,10 +1,13 @@
 import React from "react";
-import Leetcode from "./icons/Leetcode";
-import LinkedIn from "./icons/LinkedIn";
-import Github from "./icons/Github";
-import Instagram from "./icons/Instagram";
-import Gmail from "./icons/Gmail";
-import AvatarMorph from "./utils/AvatarMorph";
+
+import {
+	Leetcode,
+	LinkedIn,
+	Instagram,
+	Github,
+	Gmail,
+	AvatarMorph,
+} from "../components";
 
 function Landing() {
 	return (
