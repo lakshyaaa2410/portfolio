@@ -1,15 +1,14 @@
+@use "sass:math";
 @mixin sp-layout {
 	@media screen and (max-width: 750px) {
 		@content;
 	}
 }
-
 @function random_range($min, $max) {
-	$rand: random();
-	$random_range: $min + floor($rand * (($max - $min) + 1));
+	$rand: math.random();
+	$random_range: $min + math.floor($rand * (($max - $min) + 1));
 	@return $random_range;
 }
-
 .stars-background {
 	position: fixed;
 	inset: 0;
@@ -56,10 +55,10 @@
 
 	@for $i from 1 through $star-count {
 		&:nth-child(#{$i}) {
-			--star-tail-length: #{random_range(500em, 750em) / 100};
-			--top-offset: #{random_range(0vh, 8000vh) / 100};
-			--fall-duration: #{random_range(6000, 12000s) / 600};
-			--fall-delay: #{random_range(0, 1000s) / 1000};
+			--star-tail-length: #{calc(random_range(500em, 750em) / 100)};
+			--top-offset: #{calc(random_range(0vh, 8000vh) / 100)};
+			--fall-duration: #{calc(random_range(6000, 12000s) / 600)};
+			--fall-delay: #{calc(random_range(0, 1000s) / 1000)};
 		}
 	}
 

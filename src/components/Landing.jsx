@@ -34,10 +34,10 @@ function Landing() {
 							</button>
 						</div>
 						<div className="mt-10 flex flex-row space-x-8 justify-center">
-							<LinkedIn pop="#0a66c2" height="27.5px" />
 							<Leetcode pop="#f89d17" height="27.5px" />
 							<Github pop="white" height="27.5px" />
 							<Instagram pop="#ff0e5b" height="27.5px" />
+							<LinkedIn pop="#0a66c2" height="27.5px" />
 							<Gmail pop="red" height="27.5px" />
 						</div>
 					</div>
